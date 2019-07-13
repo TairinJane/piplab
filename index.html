@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FORM</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="validation.js"></script>
+</head>
+<body>
+<table>
+<form action="script.php" method="get" onsubmit="return validate()">
+    <tr><td>X:</td>
+        <td><input type="text" id="X" name="X"></td> </tr>
+    <tr><td>Y:</td>
+        <td><input type="text" id="Y" name="Y"></td></tr>
+    <tr><td>R:</td>
+        <td><input type="text" id="R" name="R"></td></tr>
+    <tr><td><input type="submit"></td></tr>
+</form>
+    <tr><td id="text"></td></tr>
+</table>
+</body>
+</html>
