@@ -7,37 +7,43 @@
     <script src="./validation.js"></script>
 </head>
 <body>
-<div class="table" id="head">
-    <div class="row" id="capture">
-        <div class="cell">
-            Student
+<div class="container">
+    <div class="table" id="head">
+        <div class="row" id="capture">
+            <div class="cell">
+                Student
+            </div>
+            <div class="cell">
+                Group
+            </div>
+            <div class="cell">
+                Variant
+            </div>
         </div>
-        <div class="cell">
-            Group
-        </div>
-        <div class="cell">
-            Variant
+        <div class="row">
+            <div class="cell">
+                Kozhemyako A.K.
+            </div>
+            <div class="cell">
+                P3211
+            </div>
+            <div class="cell">
+                211011
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="cell">
-            Kozhemyako A.K.
-        </div>
-        <div class="cell">
-            P3211
-        </div>
-        <div class="cell">
-            211011
+    <img src="area.jpg" alt="Area">
+    <div class="table" id="form">
+        <div class="row">
+            <form action="script.php" method="get" onsubmit="return validate()" class="cell">
+                <p class="row"><label for="X">X:</label><input type="text" id="X" name="X"></p>
+                <p class="row"><label for="Y">Y:</label><input type="text" id="Y" name="Y"></p>
+                <p class="row"><label for="R">R:</label><input type="text" id="R" name="R"></p>
+                <p class="row"><input type="submit" id="submitButton" value="Check"></p>
+                <p class="row" id="text"></p>
+            </form>
         </div>
     </div>
-</div>
-<div class="table" id="form">
-    <form action="script.php" method="get" onsubmit="return validate()">
-        <p class="row"><label for="X">X:</label><input type="text" id="X" name="X"></p>
-        <p class="row"><label for="Y">Y:</label><input type="text" id="Y" name="Y"></p>
-        <p class="row"><label for="R">R:</label><input type="text" id="R" name="R"></p>
-        <p class="row"><input type="submit" id="submitButton" value="Check"></p>
-    </form>
 </div>
 </body>
 </html>

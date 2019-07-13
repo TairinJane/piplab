@@ -1,7 +1,10 @@
+div.container {
+    width: 100%;
+}
+
 .table {
     display: table;
-    width: 100%;
-    margin: 10px;
+    padding: 5px;
 }
 
 .row {
@@ -24,6 +27,7 @@
 }
 
 #head {
+    width: 100%;
     font-family: serif;
     color: brown;
     font-size: 12pt;
@@ -36,6 +40,8 @@
 }
 
 #form {
+    margin-left: auto;
+    margin-right: auto;
     font-size: 16pt;
 }
 
@@ -44,10 +50,16 @@
 }
 
 #form input {
+    width: 100%;
     transition-duration: 0.4s;
 }
 
+form {
+    margin: auto;
+}
+
 input[type=text] {
+    font-size: 14px;
     outline: none;
     border: 1px solid darkgrey;
     margin: 1%;
@@ -62,9 +74,8 @@ input[type=submit] {
     background: green;
     color: white;
     padding: 5px 10px;
-    width: auto;
     border-radius: 4px;
-    margin-top: 5px;
+    margin: 5px auto;
 }
 
 input[type=submit]:hover {
