@@ -7,7 +7,19 @@
     <script src="validation.js"></script>
 </head>
 <body>
-<table>
+<table id="head">
+    <tr>
+        <td>Student</td>
+        <td>Group</td>
+        <td>Variant</td>
+    </tr>
+    <tr>
+        <td>Kozhemyako A.K.</td>
+        <td>P3211</td>
+        <td>211011</td>
+    </tr>
+</table>
+<table id="form">
 <form action="script.php" method="get" onsubmit="return validate()">
     <tr><td>X:</td>
         <td><input type="text" id="X" name="X"></td> </tr>
