@@ -7,29 +7,37 @@
     <script src="validation.js"></script>
 </head>
 <body>
-<table id="head">
-    <tr>
-        <td>Student</td>
-        <td>Group</td>
-        <td>Variant</td>
-    </tr>
-    <tr>
-        <td>Kozhemyako A.K.</td>
-        <td>P3211</td>
-        <td>211011</td>
-    </tr>
-</table>
-<table id="form">
-<form action="script.php" method="get" onsubmit="return validate()">
-    <tr><td>X:</td>
-        <td><input type="text" id="X" name="X"></td> </tr>
-    <tr><td>Y:</td>
-        <td><input type="text" id="Y" name="Y"></td></tr>
-    <tr><td>R:</td>
-        <td><input type="text" id="R" name="R"></td></tr>
-    <tr><td><input type="submit"></td></tr>
-</form>
-    <tr><td id="text"></td></tr>
-</table>
+<div class="table" id="head">
+    <div class="row" id="capture">
+        <div class="cell">
+            Student
+        </div>
+        <div class="cell">
+            Group
+        </div>
+        <div class="cell">
+            Variant
+        </div>
+    </div>
+    <div class="row">
+        <div class="cell">
+            Kozhemyako A.K.
+        </div>
+        <div class="cell">
+            P3211
+        </div>
+        <div class="cell">
+            211011
+        </div>
+    </div>
+</div>
+<div class="table" id="form">
+    <form action="script.php" method="get" onsubmit="return validate()">
+        <p class="row"><label for="X">X:</label><input type="text" id="X" name="X"></p>
+        <p class="row"><label for="Y">Y:</label><input type="text" id="Y" name="Y"></p>
+        <p class="row"><label for="R">R:</label><input type="text" id="R" name="R"></p>
+        <p class="row"><input type="submit" id="submitButton" value="Check"></p>
+    </form>
+</div>
 </body>
 </html>

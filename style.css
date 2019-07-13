@@ -1,0 +1,74 @@
+.table {
+    display: table;
+    width: 100%;
+    margin: 10px;
+}
+
+.row {
+    display: table-row;
+    margin: 10px;
+}
+
+.cell {
+    display: table-cell;
+    padding: 2px;
+}
+
+::selection {
+    background: azure;
+    color: blue;
+}
+
+#capture {
+    font-weight: bold;
+}
+
+#head {
+    font-family: serif;
+    color: brown;
+    font-size: 12pt;
+}
+
+#head .cell:hover {
+    color: red;
+    transition-duration: 0.5s;
+    transform: rotateX(360deg);
+}
+
+#form {
+    font-size: 16pt;
+}
+
+#form label {
+    margin: 1%;
+}
+
+#form input {
+    transition-duration: 0.4s;
+}
+
+input[type=text] {
+    outline: none;
+    border: 1px solid darkgrey;
+    margin: 1%;
+}
+
+input[type=text]:focus {
+    border: 1px solid green;
+}
+
+input[type=submit] {
+    border: 2px solid transparent;
+    background: green;
+    color: white;
+    padding: 5px 10px;
+    width: auto;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+input[type=submit]:hover {
+    background: white;
+    border: 2px solid green;
+    color: green;
+}
