@@ -5,10 +5,12 @@
 
 body {
     background: #f4e6f8;
+    font-family: Georgia, serif;
 }
 
 div.container {
     width: 100%;
+    color: #3C1362;
 }
 
 table {
@@ -35,7 +37,6 @@ td {
 #head {
     text-align: center;
     width: 100%;
-    font-family: serif;
     color: white;
     font-size: 14pt;
     background: rgb(224, 174, 238);
@@ -47,12 +48,12 @@ td {
 }
 
 #head td:hover {
-    color: red;
+    color: #FFE53F;
     transition-duration: 0.5s;
     transform: rotateX(360deg);
 }
 
-#form {
+#form, #result {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -85,13 +86,13 @@ input[type=text] {
 }
 
 input[type=text]:focus {
-    border: 1px solid green;
+    border: 1px solid navy;
 }
 
-input[type=submit] {
+input[type=submit], button {
     outline: none;
     border: 2px solid transparent;
-    background: green;
+    background: darkviolet;
     color: white;
     padding: 5px 10px;
     border-radius: 4px;
@@ -100,10 +101,22 @@ input[type=submit] {
 
 input[type=submit]:hover {
     background: white;
-    border: 2px solid green;
-    color: green;
+    border: 2px solid darkviolet;
+    color: darkviolet;
 }
 
 #text {
+    padding: 5px;
     font-size: 14pt;
+    text-align: center;
+}
+
+#result {
+    border-collapse: collapse;
+}
+
+#result td, th {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid darkviolet;
 }

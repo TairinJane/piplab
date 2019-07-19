@@ -6,8 +6,7 @@ $y = $_GET['Y'];
 $R = $_GET['R'];
 
 $HEADER = '
-<table>
-    <tr>
+<tr>
         <th>X</th>
         <th>Y</th>
         <th>R</th>
@@ -17,8 +16,7 @@ $HEADER = '
     </tr>
     <tr>';
 
-$FOOTER = '    </tr>
-</table>';
+$FOOTER = '    </tr>';
 
 $PAGE = $HEADER . "<td>$x</td>" . "<td>$y</td>" . "<td>$R</td>";
 if ($x <= 0 && $y >= 0 && ($x ** 2 + $y ** 2 <= $R ** 2) || $x <= 0 && $y <= 0 && ($y >= (-$x - $R))

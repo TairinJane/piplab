@@ -14,10 +14,18 @@ function validate() {
     } else if (isNaN(R) || R<=0) {
         text = "Invalid R";
     } else {
-        text = "";
+        text = "All right!";
         valid = true;
     }
     document.getElementById("text").innerHTML = text;
     //alert(text);
-    return valid;
+
+    if (valid) {
+        $.get("./script.php", {X: x, Y: y, R: R}, function (html) {
+            //alert(html);
+            document.getElementById("result").innerHTML = html;
+        } )
+    }
+
+    return false;
 }
