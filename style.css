@@ -1,19 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f4e6f8;
+}
+
 div.container {
     width: 100%;
 }
 
-.table {
-    display: table;
+table {
     padding: 5px;
 }
 
-.row {
-    display: table-row;
+tr {
     margin: 10px;
 }
 
-.cell {
-    display: table-cell;
+td {
     padding: 2px;
 }
 
@@ -27,22 +33,34 @@ div.container {
 }
 
 #head {
+    text-align: center;
     width: 100%;
     font-family: serif;
-    color: brown;
-    font-size: 12pt;
+    color: white;
+    font-size: 14pt;
+    background: rgb(224, 174, 238);
+    background: radial-gradient(circle, rgba(224, 174, 238, 1) 53%, rgba(123, 125, 226, 1) 100%);
 }
 
-#head .cell:hover {
+#head td {
+    width: 33.3%;
+}
+
+#head td:hover {
     color: red;
     transition-duration: 0.5s;
     transform: rotateX(360deg);
 }
 
 #form {
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
     font-size: 16pt;
+}
+
+#form td {
+    padding: 20px;
 }
 
 #form label {
@@ -55,14 +73,15 @@ div.container {
 }
 
 form {
-    margin: auto;
+    margin: 10px auto;
 }
 
 input[type=text] {
-    font-size: 14px;
+    padding: 1px;
+    font-size: 16px;
     outline: none;
     border: 1px solid darkgrey;
-    margin: 1%;
+    margin: 1% auto;
 }
 
 input[type=text]:focus {
@@ -70,6 +89,7 @@ input[type=text]:focus {
 }
 
 input[type=submit] {
+    outline: none;
     border: 2px solid transparent;
     background: green;
     color: white;
@@ -82,4 +102,8 @@ input[type=submit]:hover {
     background: white;
     border: 2px solid green;
     color: green;
+}
+
+#text {
+    font-size: 14pt;
 }

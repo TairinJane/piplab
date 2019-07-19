@@ -8,42 +8,44 @@
 </head>
 <body>
 <div class="container">
-    <div class="table" id="head">
-        <div class="row" id="capture">
-            <div class="cell">
+    <table id="head">
+        <tr id="capture">
+            <td>
                 Student
-            </div>
-            <div class="cell">
+            </td>
+            <td>
                 Group
-            </div>
-            <div class="cell">
+            </td>
+            <td>
                 Variant
-            </div>
-        </div>
-        <div class="row">
-            <div class="cell">
+            </td>
+        </tr>
+        <tr>
+            <td>
                 Kozhemyako A.K.
-            </div>
-            <div class="cell">
+            </td>
+            <td>
                 P3211
-            </div>
-            <div class="cell">
+            </td>
+            <td>
                 211011
-            </div>
-        </div>
-    </div>
-    <img src="area.jpg" alt="Area">
-    <div class="table" id="form">
-        <div class="row">
-            <form action="script.php" method="get" onsubmit="return validate()" class="cell">
-                <p class="row"><label for="X">X:</label><input type="text" id="X" name="X"></p>
-                <p class="row"><label for="Y">Y:</label><input type="text" id="Y" name="Y"></p>
-                <p class="row"><label for="R">R:</label><input type="text" id="R" name="R"></p>
-                <p class="row"><input type="submit" id="submitButton" value="Check"></p>
-                <p class="row" id="text"></p>
-            </form>
-        </div>
-    </div>
+            </td>
+        </tr>
+    </table>
+    <table id="form">
+        <tr>
+            <td>
+                <form action="script.php" method="get" onsubmit="return validate()" class="cell">
+                    <p><label for="X">X:</label><input type="text" id="X" name="X"></p>
+                    <p><label for="Y">Y:</label><input type="text" id="Y" name="Y"></p>
+                    <p><label for="R">R:</label><input type="text" id="R" name="R"></p>
+                    <p><input type="submit" id="submitButton" value="Check"></p>
+                    <p id="text">Enter your values</p>
+                </form>
+            </td>
+            <td><img src="area.jpg" alt="Area"></td>
+        </tr>
+    </table>
 </div>
 </body>
 </html>
