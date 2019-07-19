@@ -78,7 +78,8 @@ form {
 }
 
 input[type=text] {
-    padding: 1px;
+    border-radius: 2px;
+    padding: 2px;
     font-size: 16px;
     outline: none;
     border: 1px solid darkgrey;
@@ -89,7 +90,8 @@ input[type=text]:focus {
     border: 1px solid navy;
 }
 
-input[type=submit], button {
+input[type=submit] {
+    font-weight: bold;
     outline: none;
     border: 2px solid transparent;
     background: darkviolet;
@@ -112,6 +114,7 @@ input[type=submit]:hover {
 }
 
 #result {
+    font-size: 14pt;
     border-collapse: collapse;
 }
 
@@ -119,4 +122,10 @@ input[type=submit]:hover {
     padding: 5px;
     text-align: center;
     border: 1px solid darkviolet;
+}
+
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
 }
