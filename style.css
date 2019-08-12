@@ -6,15 +6,12 @@
 body {
     background: #f4e6f8;
     font-family: Georgia, serif;
-}
-
-div.container {
-    width: 100%;
     color: #3C1362;
 }
 
 table {
     padding: 5px;
+    border-collapse: collapse;
 }
 
 tr {
@@ -45,12 +42,27 @@ td {
 
 #head td {
     width: 33.3%;
+    padding: 5px;
 }
 
 #head td:hover {
     color: #FFE53F;
     transition-duration: 0.5s;
     transform: rotateX(360deg);
+}
+
+#form {
+    margin: 10px auto;
+    text-align: center;
+}
+
+#form .capture {
+    font-weight: bold;
+    padding: 15px 0;
+
+}
+#form .image {
+    width: 40%;
 }
 
 #form, #result {
@@ -61,7 +73,7 @@ td {
 }
 
 #form td {
-    padding: 20px;
+    padding: 5px;
 }
 
 #form label {
@@ -71,19 +83,16 @@ td {
 #form input {
     width: 100%;
     transition-duration: 0.4s;
-}
-
-form {
-    margin: 10px auto;
+    margin: 0 1%;
 }
 
 input[type=text] {
     border-radius: 2px;
-    padding: 2px;
+    padding: 1%;
     font-size: 16px;
     outline: none;
     border: 1px solid darkgrey;
-    margin: 1% auto;
+    margin: 0;
 }
 
 input[type=text]:focus {
@@ -91,6 +100,7 @@ input[type=text]:focus {
 }
 
 input[type=submit] {
+    width: 100%;
     font-weight: bold;
     outline: none;
     border: 2px solid transparent;
@@ -98,7 +108,7 @@ input[type=submit] {
     color: white;
     padding: 5px 10px;
     border-radius: 4px;
-    margin: 5px auto;
+    margin: 7px auto;
 }
 
 input[type=submit]:hover {
@@ -107,8 +117,33 @@ input[type=submit]:hover {
     color: darkviolet;
 }
 
+#form input[type=checkbox] {
+    width: auto;
+}
+
+#form input[type=button] {
+    background: white;
+    border: 1px solid lightslategray;
+    border-radius: 4px;
+    padding: 4px 2px;
+    font-family: Georgia, serif;
+    font-size: 12pt;
+    outline: none;
+}
+
+#form input[type=button]:hover {
+    border-color: darkviolet;
+}
+
+#form input[type=button].active {
+    border-color: darkviolet;
+    color: darkviolet;
+    font-weight: bold;
+}
+
 #text {
-    padding: 5px;
+    margin: auto;
+    padding: 0;
     font-size: 14pt;
     text-align: center;
 }
@@ -128,4 +163,8 @@ img {
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px;
+    margin: 10px 0 10px 10px;
+    max-width: 100%;
+    height: auto;
+    width: auto;
 }

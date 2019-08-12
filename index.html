@@ -2,53 +2,85 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Coordinates checker</title>
+    <title>ПИП Lab №1</title>
     <link rel="stylesheet" type="text/css" href="./style.css">
     <link rel="icon" type="image/png" href="./puzzle.png">
-    <script src="./validation.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-<div class="container">
-    <table id="head">
-        <tr id="capture">
-            <td>
-                Student
-            </td>
-            <td>
-                Group
-            </td>
-            <td>
-                Variant
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Kozhemyako A.K.
-            </td>
-            <td>
-                P3211
-            </td>
-            <td>
-                211011
-            </td>
-        </tr>
-    </table>
+<table id="head">
+    <tr id="capture">
+        <td>
+            Student
+        </td>
+        <td>
+            Group
+        </td>
+        <td>
+            Variant
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Kozhemyako A.K.
+        </td>
+        <td>
+            P3211
+        </td>
+        <td>
+            211011
+        </td>
+    </tr>
+</table>
+<form action="" method="get" onsubmit="return validate()">
     <table id="form">
+        <tr><td colspan="16" class="capture">Enter your point coordinates to check if it's in picked area</td></tr>
         <tr>
-            <td>
-                <form action="" method="get" onsubmit="return validate()">
-                    <p><label for="X">X:</label><input type="text" id="X" name="X"></p>
-                    <p><label for="Y">Y:</label><input type="text" id="Y" name="Y"></p>
-                    <p><label for="R">R:</label><input type="text" id="R" name="R"></p>
-                    <p><input type="submit" id="submitButton" value="Check"></p>
-                    <p id="text">Enter your values</p>
-                </form>
+            <td colspan="15">
+                Pick <b>X</b>
             </td>
-            <td><img src="./area.jpg" alt="Area"></td>
+            <td colspan="1" rowspan="10" class="image"><img src="./area.jpg" alt="Area"></td>
         </tr>
+        <tr>
+            <td colspan="5"><input type="button" class="X" value="-5" onclick="clickX(this)"></td>
+            <td colspan="5"><input type="button" class="X" value="-4" onclick="clickX(this)"></td>
+            <td colspan="5"><input type="button" class="X" value="-3" onclick="clickX(this)"></td>
+        </tr>
+        <tr>
+            <td colspan="5"><input type="button" class="X" value="-2" onclick="clickX(this)"></td>
+            <td colspan="5"><input type="button" class="X active" value="-1" onclick="clickX(this)"></td>
+            <td colspan="5"><input type="button" class="X" value="0" onclick="clickX(this)"></td>
+        </tr>
+        <tr>
+            <td colspan="5"><input type="button" class="X" value="1" onclick="clickX(this)"></td>
+            <td colspan="5"><input type="button" class="X" value="2" onclick="clickX(this)"></td>
+            <td colspan="5"><input type="button" class="X" value="3" onclick="clickX(this)"></td>
+        </tr>
+        <tr>
+            <td colspan="15"><label for="Y">Type <b>Y</b> from -5 to 3</label></td>
+        </tr>
+        <tr>
+            <td colspan="15"><input type="text" id="Y" name="Y"></td>
+        </tr>
+        <tr>
+            <td colspan="15">Pick <b>R</b></td>
+        </tr>
+        <tr>
+            <td colspan="3"><input type="checkbox" class="R" value="1" checked onclick="clickR(this)"> 1</td>
+            <td colspan="3"><input type="checkbox" class="R" value="1,5" onclick="clickR(this)"> 1,5</td>
+            <td colspan="3"><input type="checkbox" class="R" value="2" onclick="clickR(this)"> 2</td>
+            <td colspan="3"><input type="checkbox" class="R" value="2,5" onclick="clickR(this)"> 2,5</td>
+            <td colspan="3"><input type="checkbox" class="R" value="3" onclick="clickR(this)"> 3</td>
+        </tr>
+        <tr>
+            <td colspan="15"><input type="submit" id="submitButton" value="Check"></td>
+        </tr>
+<!--        <tr>-->
+<!--            <td colspan="15"><p id="text">Enter your values</p></td>-->
+<!--        </tr>-->
     </table>
-    <table id="result"></table>
-</div>
+</form>
+<table id="result"></table>
+<script src="./validation.js"></script>
 </body>
 </html>

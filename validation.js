@@ -1,44 +1,32 @@
+let Xval = -1, Yval = 0, Rval = 1;
+const Xarray = Array.from(document.getElementsByClassName("X"));
+const Rarray = Array.from(document.getElementsByClassName("R"));
+
+function clickX(elem) {
+    let element = elem;
+    Xval = elem.value;
+    Xarray.forEach(el => el.classList.remove("active"));
+    element.classList.add("active");
+}
+
+function clickR(elem) {
+    let element = elem;
+    Rval = elem.value;
+    Rarray.forEach(el => el.checked = false);
+    element.checked = true;
+}
+
 function validate() {
-    let x, y, R, text, valid;
-
-    x = document.getElementById("X");
-    y = document.getElementById("Y");
-    R = document.getElementById("R");
-    valid = true;
-    text = "Invalid input";
-    //alert(x.value + " " + y.value + " " + R.value + "\n" + (+x.value) + " " + (+y.value) + " " + (+R.value));
-    //alert(isNaN(x.value));
-
-    if (x.value === "" || +x.value !== +x.value) {
-        x.style.borderColor = "red";
-        //text = "Invalid X";
-        valid = false;
-    } else x.style.borderColor = "darkgrey";
-
-    if (y.value === "" || +y.value !== +y.value) {
-        y.style.borderColor = "red";
-        //text = "Invalid Y";
-        valid = false;
-    } else y.style.borderColor = "darkgrey";
-
-    if (R.value === "" || +R.value !== +R.value || R.value <= 0) {
-        R.style.borderColor = "red";
-        //text = "Invalid R";
-        valid = false;
-    } else R.style.borderColor = "darkgrey";
-
-    if (valid) {
-        text = "All right!";
-    }
-    document.getElementById("text").innerHTML = text;
-    //alert(text);
-
-    if (valid) {
-        $.get("./script.php", {X: x.value, Y: y.value, R: R.value}, function (html) {
-            //alert(html);
+    let y = document.getElementById("Y");
+    if (y.value === "" || +y.value !== +y.value || y.value > 3 || y.value < -5) {
+        y.style.borderColor = "crimson";
+        // document.getElementById("text").innerHTML = "Y must be a number in [-5; 3]";
+    } else {
+        y.style.borderColor = "darkgrey";
+        // document.getElementById("text").innerHTML = "All right!";
+        $.get("./script.php", {X: Xval, Y: Yval, R: Rval}, function (html) {
             document.getElementById("result").innerHTML = html;
         })
     }
-
     return false;
 }
