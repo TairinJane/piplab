@@ -20,7 +20,9 @@ function validate() {
         y.style.borderColor = "crimson";
     } else {
         y.style.borderColor = "darkgrey";
-        $.get("./script.php", {X: Xval, Y: parseFloat(y.value), R: Rval}, function (html) {
+        Yval = parseFloat(y.value);
+        console.log(Xval, Yval, Rval);
+        $.get("./script.php", {X: Xval, Y: Yval, R: Rval}, function (html) {
             document.getElementById("result").innerHTML = html;
         })
     }
