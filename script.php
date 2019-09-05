@@ -24,6 +24,6 @@ if ($x <= 0 && $y >= 0 && ($x ** 2 + $y ** 2 <= $R ** 2) || $x <= 0 && $y <= 0 &
     $PAGE .= "<td>Yes</td>";
 } else $PAGE .= "<td>No</td>";
 
-$PAGE .= "<td>" . (date('d.m.Y, H:i:s e')) . "</td>" . "<td>" . (microtime(true) - $time) . " msec </td>" . $FOOTER;
+$PAGE .= "<td>" . (date('d.m.Y, H:i:s e')) . "</td>" . "<td>" . number_format(microtime(true) - $time, 5, '.', '') . " msec </td>" . $FOOTER;
 
 echo $PAGE;
