@@ -16,7 +16,7 @@ function clickR(elem) {
 
 function validate() {
     let y = document.getElementById("Y");
-    if (y.value === "" || +y.value !== +y.value || y.value > 3 || y.value < -5) {
+    if (y.value === "" || +y.value !== +y.value || y.value >= 3 || y.value <= -5) {
         y.style.borderColor = "crimson";
     } else {
         y.style.borderColor = "darkgrey";
