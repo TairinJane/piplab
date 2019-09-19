@@ -1,9 +1,12 @@
 <?php
 $time = $_SERVER['REQUEST_TIME_FLOAT'];
 
-$x = $_GET['X'];
-$y = $_GET['Y'];
-$R = $_GET['R'];
+$x = (float) $_GET['X'];
+$y = (float) $_GET['Y'];
+$R = (float) $_GET['R'];
+
+$xArr = [-5, -4, -3, -2, -1, 0, 1, 2, 3];
+$rArr = [1, 1.5, 2, 2.5, 3];
 
 $HEADER = '
 <tr>
@@ -17,13 +20,22 @@ $HEADER = '
     <tr>';
 
 $FOOTER = '    </tr>';
+//echo gettype($x) . gettype($y) . gettype($R);
 
-$PAGE = $HEADER . "<td>$x</td>" . "<td>$y</td>" . "<td>$R</td>";
-if ($x <= 0 && $y >= 0 && ($x ** 2 + $y ** 2 <= $R ** 2) || $x <= 0 && $y <= 0 && ($y >= (-$x - $R))
-    || $x >= 0 && $y <= 0 && $x <= $R && $y >= (-$R / 2)) {
-    $PAGE .= "<td>Yes</td>";
-} else $PAGE .= "<td>No</td>";
+if ((is_numeric($x) && is_numeric($y) && is_numeric($R))
+    && (in_array($x, $xArr) && in_array($R, $rArr) && (-5 <= $y && $y <= 3))) {
+    $PAGE = $HEADER . "<td>$x</td>" . "<td>$y</td>" . "<td>$R</td>";
 
-$PAGE .= "<td>" . (date('d.m.Y, H:i:s e')) . "</td>" . "<td>" . number_format(microtime(true) - $time, 5, '.', '') . " msec </td>" . $FOOTER;
+    if ($x <= 0 && $y >= 0 && ($x ** 2 + $y ** 2 <= $R ** 2) || $x <= 0 && $y <= 0 && ($y >= (-$x - $R))
+        || $x >= 0 && $y <= 0 && $x <= $R && $y >= (-$R / 2)) {
+        $PAGE .= "<td>Yes</td>";
+
+    } else $PAGE .= "<td>No</td>";
+
+    $PAGE .= "<td>" . (date('d.m.Y, H:i:s e')) . "</td>" . "<td>" . number_format(microtime(true) - $time, 5, '.', '') . " msec </td>" . $FOOTER;
+
+} else {
+    $PAGE = "X = $x, Y = $y, R = $R is not valid";
+}
 
 echo $PAGE;
