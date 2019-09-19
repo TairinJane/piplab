@@ -1,9 +1,9 @@
 <?php
 $time = $_SERVER['REQUEST_TIME_FLOAT'];
 
-$x = (float) $_GET['X'];
-$y = (float) $_GET['Y'];
-$R = (float) $_GET['R'];
+$x = $_GET['X'];
+$y = $_GET['Y'];
+$R = $_GET['R'];
 
 $xArr = [-5, -4, -3, -2, -1, 0, 1, 2, 3];
 $rArr = [1, 1.5, 2, 2.5, 3];
@@ -20,10 +20,9 @@ $HEADER = '
     <tr>';
 
 $FOOTER = '    </tr>';
-//echo gettype($x) . gettype($y) . gettype($R);
 
 if ((is_numeric($x) && is_numeric($y) && is_numeric($R))
-    && (in_array($x, $xArr) && in_array($R, $rArr) && (-5 <= $y && $y <= 3))) {
+    && (in_array((float) $x, $xArr) && in_array((float) $R, $rArr) && (-5 <= $y && $y <= 3))) {
     $PAGE = $HEADER . "<td>$x</td>" . "<td>$y</td>" . "<td>$R</td>";
 
     if ($x <= 0 && $y >= 0 && ($x ** 2 + $y ** 2 <= $R ** 2) || $x <= 0 && $y <= 0 && ($y >= (-$x - $R))
