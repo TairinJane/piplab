@@ -32,6 +32,7 @@ td {
 }
 
 #head {
+    font-family: Georgia, serif;
     text-align: center;
     width: 100%;
     color: white;
@@ -92,7 +93,7 @@ input[type=text] {
     font-size: 16px;
     outline: none;
     border: 1px solid darkgrey;
-    margin: 0;
+    margin: 1%;
 }
 
 input[type=text]:focus {
@@ -108,7 +109,7 @@ input[type=submit] {
     color: white;
     padding: 5px 10px;
     border-radius: 4px;
-    margin: 7px auto;
+    margin: 1% auto;
 }
 
 input[type=submit]:hover {
